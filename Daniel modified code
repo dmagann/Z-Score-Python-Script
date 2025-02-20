@@ -120,13 +120,25 @@ pop1_least = least(population1)
 pop2_least = least(population2)
 pop3_least = least(population3)
     
+import statistics as st
+
+pop1_median = st.median(population1)
+pop2_median = st.median(population2)
+pop3_median = st.median(population3)
+
+pop1_range = max(population1) - min(population1)
+pop2_range = max(population2) - min(population2)
+pop3_range = max(population3) - min(population3)
+
+
+print(pop1_range)
+print(pop2_range)
+print(pop3_range)
+
     
    
-value1 = z_score(pop1_least, pop1_avg, pop1_sd)
-print(value1)
-
-
-
+results = z_score(pop1_range, pop1_avg, pop1_sd)
+print(results)
 
 
 # Place the calculated z-score result between the return statement and this comment so it will be returned by the z_score function
